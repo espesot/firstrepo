@@ -1,0 +1,114 @@
+.cajaEjemplo{
+    width: 100px;
+    height:100px;
+
+    /* echo en clase  */
+    border-bottom: solid 3px black;
+    margin: 20px;
+    background-image: linear-gradient(to top,black, #ffffff);
+    
+    transform: translate( 150px) rotateZ(30deg);
+    
+}
+
+.cajaB{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-bottom: solid 3px black;
+    background-image: linear-gradient(45deg, red, white);
+
+    /* transform: translateY(-20px);       se colocan varias propiedades dentro del transform para que no se pisen*/
+    /* cuando usamos el  ¨scale¨ en negativo lo da vuelta como espejo  */
+    
+    transform: rotate(45deg) scale(1.25, 1.40) skew(20deg, 50deg);
+
+}
+
+.menu_item{
+    border: solid 3px green;
+    padding: 2px;
+    background-color: darkcyan;
+    transition: all .3s;
+}
+
+/* es una pseudoclase.. apra dale forma a alfuno eventos de las clases que definimos  */
+.menu_item:hover{
+    background-color: aqua;
+    transform: scaleY(1.2);
+}
+@keyframes ampliar {
+    0%{width:100px;}
+    25%{width:300px;}
+    50%{width:200px;background-color: red;}
+    75%{width:100px; }
+    100%{width:100px;background-color: green;}
+}
+
+.animado{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+animation:ampliar infinite ease-in 1s 5s;
+/* animation-name: ampliar;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in;
+animation-duration: 4s;
+animation-delay: 1s; */
+
+}
+.loader{
+    width: 100px;
+    height: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+
+.loader spam{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin:auto;
+}
+
+.pelota{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    animation: rebotar .5s alternate infinite;
+}
+
+.pelota:nth-child(2){
+    animation-delay: .16s;
+}
+.pelota:nth-child(3){
+    animation-delay: .32s;
+}
+
+ /* @keyframes rebotar{
+    from{
+        transform: scaleX(1.25);
+    }
+    to{
+        transform: scaleX(1)translateY(-50px);
+    }
+}  */
+
+@keyframes shake{
+    25%{transform: translateX(5px);}
+    50%{transform: translateX(-5px);}
+    75%{transform: translateX(5px);}
+}
+
+input:invalid{
+    animation: shake .3s;
+}
+.liberia:hover{
+    animation-name: hinge;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
