@@ -112,3 +112,6 @@ input:invalid{
     animation-duration: 5s;
     animation-delay: 1s;
 }
+.nueva{
+    background-color: black;
+}
